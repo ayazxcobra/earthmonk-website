@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact & Booking — The House of Earthmonk</title>
+<meta name="description" content="Reserve a table or get in touch with The House of Earthmonk, Bhayli, Vadodara.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand">Earth<span>monk</span></a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact &amp; Booking</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section style="padding-bottom:0;">
+  <div class="container">
+    <span class="eyebrow">Get in touch</span>
+    <h1 style="font-size:clamp(2rem,4vw,3rem);">Reserve a table, or say hello.</h1>
+  </div>
+</section>
+
+<section id="booking">
+  <div class="container two-col" style="align-items:start;">
+    <div class="form-card">
+      <h3>Book a table</h3>
+      <form id="booking-form" novalidate>
+        <div class="form-row">
+          <div class="field">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" required minlength="2" maxlength="80">
+          </div>
+          <div class="field">
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" name="phone" required placeholder="98765 43210">
+          </div>
+        </div>
+        <div class="field">
+          <label for="email">Email (optional)</label>
+          <input type="email" id="email" name="email">
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="party_size">Party size</label>
+            <input type="number" id="party_size" name="party_size" min="1" max="30" required value="2">
+          </div>
+          <div class="field">
+            <label for="booking_date">Date</label>
+            <input type="date" id="booking_date" name="booking_date" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="booking_time">Time</label>
+          <input type="time" id="booking_time" name="booking_time" required value="19:30">
+        </div>
+        <div class="field">
+          <label for="special_request">Special request (optional)</label>
+          <textarea id="special_request" name="special_request" maxlength="300" placeholder="Birthday, window seat, allergies, etc."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Request table</button>
+        <div class="form-msg" id="booking-msg"></div>
+      </form>
+    </div>
+
+    <div>
+      <div class="form-card" style="margin-bottom:24px;">
+        <h3>Visit us</h3>
+        <p style="color:var(--bark-soft);margin-bottom:6px;">74WM+H2V, Vasna Bhayli Main Rd, opposite Darshanam Splendora, Vasant Vihar, Bhayli, Vadodara, Gujarat 391410</p>
+        <p style="color:var(--bark-soft);margin-bottom:6px;"><a href="tel:+917016733005">070167 33005</a></p>
+        <p style="color:var(--bark-soft);margin:0;">Open daily · till 12 AM</p>
+      </div>
+      <iframe
+        class="map-frame"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=The+House+of+Earthmonk,+Vasna+Bhayli+Main+Rd,+Vadodara&output=embed"
+        title="Map to The House of Earthmonk">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container" style="max-width:640px;">
+    <div class="form-card">
+      <h3>Send us a message</h3>
+      <form id="contact-form" novalidate>
+        <div class="form-row">
+          <div class="field">
+            <label for="c-name">Full name</label>
+            <input type="text" id="c-name" name="name" required minlength="2" maxlength="80">
+          </div>
+          <div class="field">
+            <label for="c-email">Email</label>
+            <input type="email" id="c-email" name="email" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="c-phone">Phone (optional)</label>
+          <input type="tel" id="c-phone" name="phone">
+        </div>
+        <div class="field">
+          <label for="c-message">Message</label>
+          <textarea id="c-message" name="message" required minlength="5" maxlength="1000"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Send message</button>
+        <div class="form-msg" id="contact-msg"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>The House of Earthmonk</h4>
+        <p>74WM+H2V, Vasna Bhayli Main Rd, opposite Darshanam Splendora, Vasant Vihar, Bhayli, Vadodara, Gujarat 391410</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <ul>
+          <li><a href="tel:+917016733005">070167 33005</a></li>
+          <li>Open daily · till 12 AM</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> The House of Earthmonk</span>
+      <span>Vadodara, Gujarat</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/api.js"></script>
+<script src="js/booking.js"></script>
+<script src="js/contact.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu — The House of Earthmonk</title>
+<meta name="description" content="Full menu for The House of Earthmonk, Vadodara — pizzas, pasta, Indian classics, small plates, mocktails and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand">Earth<span>monk</span></a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact &amp; Booking</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section style="padding-bottom:0;">
+  <div class="container">
+    <span class="eyebrow">Full Menu</span>
+    <h1 style="font-size:clamp(2rem,4vw,3rem);max-width:16ch;">Everything on the table.</h1>
+    <p style="max-width:56ch;color:var(--bark-soft);">All prices in ₹. Every dish here is vegetarian. Tap a category to jump straight to it.</p>
+  </div>
+</section>
+
+<section style="padding-top:32px;">
+  <div class="container">
+    <div class="menu-tabs" id="menu-tabs"><!-- filled by menu.js --></div>
+    <div id="menu-list">
+      <p>Loading menu…</p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>The House of Earthmonk</h4>
+        <p>74WM+H2V, Vasna Bhayli Main Rd, opposite Darshanam Splendora, Vasant Vihar, Bhayli, Vadodara, Gujarat 391410</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <ul>
+          <li><a href="tel:+917016733005">070167 33005</a></li>
+          <li>Open daily · till 12 AM</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="contact.html#booking">Book a table</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> The House of Earthmonk</span>
+      <span>Vadodara, Gujarat</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/menu.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Staff Login — The House of Earthmonk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+  th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--linen-dim); vertical-align: top; }
+  th { font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; color: var(--bark-soft); }
+  .admin-section { margin-bottom: 48px; }
+  .table-wrap { overflow-x: auto; background: #fff; border: 1px solid var(--linen-dim); border-radius: var(--radius); padding: 8px 16px; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand">Earth<span>monk</span></a>
+    <span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--bark-soft);">Staff area</span>
+  </nav>
+</header>
+
+<section>
+  <div class="container" style="max-width:480px;" id="login-view">
+    <span class="eyebrow">Staff only</span>
+    <h1 style="font-size:2rem;">Sign in</h1>
+    <div class="form-card">
+      <form id="login-form" novalidate>
+        <div class="field">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" autocomplete="username" required>
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" autocomplete="current-password" required>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Sign in</button>
+        <div class="form-msg" id="login-msg"></div>
+      </form>
+    </div>
+  </div>
+
+  <div class="container" id="dashboard-view" style="display:none;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:32px;">
+      <div>
+        <span class="eyebrow">Signed in as <span id="admin-username"></span></span>
+        <h1 style="font-size:2rem;margin-top:4px;">Dashboard</h1>
+      </div>
+      <button id="logout-btn" class="btn btn-outline">Sign out</button>
+    </div>
+
+    <div class="admin-section">
+      <h3>Table bookings</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Guest</th><th>Date &amp; time</th><th>Party</th><th>Notes</th><th>Status</th><th>Update</th></tr>
+          </thead>
+          <tbody id="bookings-body"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="admin-section">
+      <h3>Contact messages</h3>
+      <div id="messages-list"></div>
+    </div>
+
+    <div class="admin-section">
+      <h3>Menu</h3>
+      <p style="color:var(--bark-soft);">To edit prices or descriptions, use the menu API directly (see <code>README.md</code> for the endpoints) or extend this dashboard with an edit form — the backend already supports add/edit/delete.</p>
+      <a href="menu.html" class="btn btn-outline">View public menu</a>
+    </div>
+  </div>
+</section>
+
+<script src="js/api.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
